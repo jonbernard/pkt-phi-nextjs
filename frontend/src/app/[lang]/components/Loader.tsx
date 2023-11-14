@@ -1,6 +1,5 @@
-export default function Loader() {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center z-50  bg-opacity-40 bg-gray-500">
+const Loader = () => (
+  <div className="absolute inset-0 flex items-center justify-center z-50  bg-opacity-40 bg-gray-500">
     <div role="status">
       <svg
         aria-hidden="true"
@@ -21,5 +20,6 @@ export default function Loader() {
       <span className="sr-only">Loading...</span>
     </div>
   </div>
-  )
-}
+);
+
+export default Loader;

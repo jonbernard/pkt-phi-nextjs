@@ -19,6 +19,9 @@
     },
     "logoText": {
       "type": "string"
+    },
+    "logoSubtext": {
+      "type": "string"
     }
   }
 }

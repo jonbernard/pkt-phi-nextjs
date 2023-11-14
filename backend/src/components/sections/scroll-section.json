@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_scroll_sections",
+  "info": {
+    "displayName": "Scroll section",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "components": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.rich-text"
+    }
+  }
+}

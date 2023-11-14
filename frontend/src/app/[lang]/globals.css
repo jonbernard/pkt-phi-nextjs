@@ -3,38 +3,42 @@
 @tailwind utilities;
 @import "react-slideshow-image/dist/styles.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply dark:bg-black
+  @apply dark:bg-black text-lg;
 }
 
 
 /******************************************* 
   Rich Text Styles
-*******************************************/ 
+*******************************************/
 
 /* Headers */
 .rich-text h1 {
-  @apply text-4xl font-bold mb-4 text-violet-400;
+  @apply text-4xl font-bold mt-8 mb-4 text-brand-primary dark:text-brand-accent-primary;
 }
 
 .rich-text h2 {
-  @apply text-3xl font-bold mb-4 text-violet-400;
+  @apply text-3xl font-bold mt-8 mb-4 text-brand-primary dark:text-brand-accent-primary;
 }
 
 .rich-text h3 {
-  @apply text-2xl font-bold mb-4 text-violet-400;
+  @apply text-2xl font-bold mt-8 mb-4 text-brand-primary dark:text-brand-accent-primary;
 }
 
 .rich-text h4 {
-  @apply text-xl font-bold mb-4 text-violet-400;
+  @apply text-xl font-bold mt-8 mb-4 text-brand-primary dark:text-brand-accent-primary;
 }
 
 .rich-text h5 {
-  @apply text-lg font-bold mb-4 text-violet-400;
+  @apply text-lg font-bold mt-8 mb-4 text-brand-primary dark:text-brand-accent-primary;
 }
 
 .rich-text h6 {
-  @apply text-base font-bold mb-4 text-violet-200;
+  @apply text-base font-bold mt-8 mb-4 text-violet-200;
 }
 
 /* Horizontal rules */
@@ -43,7 +47,7 @@ body {
 }
 
 .rich-text a {
-  @apply text-violet-400 underline;
+  @apply text-brand-primary dark:text-brand-accent-primary underline;
 }
 
 /* Typographic replacements */
@@ -53,7 +57,7 @@ body {
 
 /* Emphasis */
 .rich-text strong {
-  @apply font-bold;
+  @apply font-black;
 }
 
 .rich-text em {
@@ -82,17 +86,17 @@ body {
   @apply mb-2;
 }
 
-.rich-text li > ul {
+.rich-text li>ul {
   @apply list-disc pl-4 mb-2;
 }
 
-.rich-text li > ol {
+.rich-text li>ol {
   @apply list-decimal pl-4 mb-2;
 }
 
 /* Code blocks */
 .rich-text pre {
-  @apply font-mono bg-gray-900 text-gray-100 rounded p-4  my-6;
+  @apply font-mono bg-gray-900 text-gray-100 rounded p-4 my-6;
 }
 
 .rich-text code {
@@ -125,7 +129,7 @@ body {
 
 /******************************************* 
   React Slideshow Styles
-*******************************************/   
+*******************************************/
 
 .react-slideshow-container [aria-label="Previous Slide"] {
   margin-left: 1rem;

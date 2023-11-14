@@ -32,11 +32,8 @@
         "sections.bottom-actions",
         "sections.feature-columns-group",
         "sections.feature-rows-group",
-        "sections.testimonials-group",
         "sections.large-video",
         "sections.rich-text",
-        "sections.pricing",
-        "sections.lead-form",
         "sections.features",
         "sections.heading"
       ],
@@ -80,6 +77,17 @@
         }
       },
       "component": "shared.seo"
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "sections.scroll-section"
+      ]
     }
   }
 }

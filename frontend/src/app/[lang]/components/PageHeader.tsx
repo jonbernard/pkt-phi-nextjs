@@ -1,13 +1,15 @@
+import { accent } from "@/utils/colors";
+
 interface PageHeaderProps {
   heading: string,
   text?: string,
 }
 
-export default function PageHeader({ heading, text } : PageHeaderProps) {
+export default function PageHeader({ heading, text }: PageHeaderProps) {
   return (
-    <div className="my-16 w-full text-center">
-    { text && <span className="text-violet-400 font-bold">{text}</span> }
-    <h2 className="text-4xl my-4 lg:text-5xl font-bold font-heading">{heading}</h2>
-  </div>
+    <div className="container mx-auto mt-16 mb-8 lg:mb-16 px-4 w-full flex flex-col items-end max-w-screen-xl">
+      {text && <span className={`${accent.text} font-bold`}>{text}</span>}
+      <h2 className="text-7xl mt-2 lg:text-9xl font-bold">{heading}</h2>
+    </div>
   );
 }

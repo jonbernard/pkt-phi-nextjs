@@ -1,0 +1,126 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "middle": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "regex": "/^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$/"
+    },
+    "title": {
+      "type": "string"
+    },
+    "employer": {
+      "type": "string"
+    },
+    "major": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string",
+      "regex": "/^[1-2]{1}[0-2]{1}[0-9]{2}$/"
+    },
+    "hrog": {
+      "type": "boolean"
+    },
+    "lost": {
+      "type": "boolean"
+    },
+    "chapterEternal": {
+      "type": "boolean"
+    },
+    "canEmail": {
+      "type": "boolean"
+    },
+    "nationalId": {
+      "type": "string"
+    },
+    "initiationDate": {
+      "type": "date"
+    },
+    "initiationNumber": {
+      "type": "string"
+    },
+    "prefix": {
+      "type": "enumeration",
+      "enum": [
+        "Mr.",
+        "Miss.",
+        "Mrs.",
+        "Prof.",
+        "Rev.",
+        "Fr.",
+        "Dr.",
+        "Atty.",
+        "Hon.",
+        "Pres.",
+        "Gov.",
+        "Rep.",
+        "Sen.",
+        "Ofc."
+      ],
+      "default": "Mr."
+    },
+    "suffix": {
+      "type": "enumeration",
+      "enum": [
+        "Jr.",
+        "Sr.",
+        "I",
+        "II",
+        "III",
+        "IV",
+        "Ph.D.",
+        "M.D."
+      ]
+    },
+    "notes": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "member"
+    }
+  }
+}

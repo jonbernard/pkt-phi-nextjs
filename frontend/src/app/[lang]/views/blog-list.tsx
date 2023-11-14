@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getStrapiMedia, formatDate } from "../utils/api-helpers";
+import { getStrapiMedia, formatDate } from "../../../utils/api-helpers";
 
 interface Article {
   id: number;
@@ -51,14 +51,14 @@ export default function PostList({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="container p-6 mx-auto space-y-6 sm:space-y-12">
+    <section className="container p-6 mx-auto space-y-6 sm:space-y-12 max-w-screen-xl">
       <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => {
           const imageUrl = getStrapiMedia(
             article.attributes.cover.data?.attributes.url
           );
 
-          const category = article.attributes.category.data?.attributes;
+          // const category = article.attributes.category.data?.attributes;
           const authorsBio = article.attributes.authorsBio.data?.attributes;
 
           const avatarUrl = getStrapiMedia(
@@ -67,9 +67,9 @@ export default function PostList({
 
           return (
             <Link
-              href={`/blog/${category?.slug}/${article.attributes.slug}`}
+              href={`/news/${article.attributes.slug}`}
               key={article.id}
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
+              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 w-full lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
             >
               {imageUrl && (
                 <Image

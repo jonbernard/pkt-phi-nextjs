@@ -3,12 +3,33 @@
   "info": {
     "name": "RichText",
     "displayName": "Rich text",
-    "icon": "text-height"
+    "icon": "text-height",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "content": {
-      "type": "richtext"
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "video": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "blocks"
     }
   }
 }

@@ -36,6 +36,21 @@ const populate = {
       },
     },
   },
+  content: {
+    populate: {
+      name: {
+        populate: true,
+      },
+      components: {
+        fields: ['image', 'video', 'text'],
+        populate: {
+          image: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      }
+    }
+  },
   seo: {
     fields: ["metaTitle", "metaDescription"],
     populate: { shareImage: true },
@@ -51,7 +66,7 @@ module.exports = (config, { strapi }) => {
       locale: ctx.query.locale,
     };
 
-    console.log("page-populate-middleware.js: ctx.query = ", ctx.query);
+    // console.log("page-populate-middleware.js: ctx.query = ", ctx.query);
 
     await next();
   };
