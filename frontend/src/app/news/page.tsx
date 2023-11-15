@@ -1,10 +1,11 @@
-"use client";
-import { useState, useEffect, useCallback } from "react";
-import { fetchAPI } from "../../../utils/fetch-api";
+'use client';
 
-import Loader from "../components/Loader";
-import Blog from "../views/blog-list";
-import PageHeader from "../components/PageHeader";
+import { useState, useEffect, useCallback } from 'react';
+import { fetchAPI } from '../../utils/fetch-api';
+
+import Loader from '../components/Loader';
+import Blog from '../views/blog-list';
+import PageHeader from '../components/PageHeader';
 
 interface Meta {
   pagination: {
@@ -14,7 +15,7 @@ interface Meta {
   };
 }
 
-export default function Profile() {
+const Profile = () => {
   const [meta, setMeta] = useState<Meta | undefined>();
   const [data, setData] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
@@ -24,19 +25,19 @@ export default function Profile() {
 
     try {
       const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
-      const path = `/articles`;
+      const path = '/articles';
       const urlParamsObject = {
-        sort: { createdAt: "desc" },
+        sort: { createdAt: 'desc' },
         populate: {
-          cover: { fields: ["url"] },
-          category: { populate: "*" },
+          cover: { fields: ['url'] },
+          category: { populate: '*' },
           authorsBio: {
-            populate: "*",
+            populate: '*',
           },
         },
         pagination: {
-          start: start,
-          limit: limit,
+          start,
+          limit,
         },
       };
       const options = { headers: { Authorization: `Bearer ${token}` } };
@@ -71,8 +72,8 @@ export default function Profile() {
     <div>
       <PageHeader heading="News" text="Phi Chapter" />
       <Blog data={data}>
-        {meta!.pagination.start + meta!.pagination.limit <
-          meta!.pagination.total && (
+        {meta!.pagination.start + meta!.pagination.limit
+          < meta!.pagination.total && (
             <div className="flex justify-center">
               <button
                 type="button"
@@ -86,4 +87,6 @@ export default function Profile() {
       </Blog>
     </div>
   );
-}
+};
+
+export default Profile;

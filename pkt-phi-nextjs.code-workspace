@@ -1,10 +1,10 @@
 {
-  "folders": [
-    {
-      "path": "."
-    }
-  ],
-"settings": {
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
 		"docwriter.style": "JSDoc",
 		"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": true
@@ -14,6 +14,8 @@
 			"javascriptreact",
 			"typescript",
 			"typescriptreact"
-		]
+		],
+		"editor.tabSize": 2,
+		"editor.detectIndentation": false
 	}
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { getStrapiURL } from '../../../utils/api-helpers';
+import { getStrapiURL } from '../../utils/api-helpers';
 import { accent } from '@/utils/colors';
 
 const FormSubmit = ({

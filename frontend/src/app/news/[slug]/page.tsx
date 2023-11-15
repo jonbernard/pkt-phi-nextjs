@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { fetchAPI } from '@/utils/fetch-api';
-import Post from '@/app/[lang]/views/post';
+import Post from '@/app/views/post';
 
 async function getPostBySlug(slug: string) {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;

@@ -1,5 +1,5 @@
-import Hero from '../app/[lang]/components/Hero';
-import Features from '../app/[lang]/components/Features';
+import Hero from '../app/components/Hero';
+import Features from '../app/components/Features';
 
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {

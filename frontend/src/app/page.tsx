@@ -1,5 +1,5 @@
 import LangRedirect from './components/LangRedirect';
-import { sectionRenderer } from '../../utils/section-renderer';
+import { sectionRenderer } from '../utils/section-renderer';
 import { getPageBySlug } from '@/utils/get-page-by-slug';
 import { APIResponseCollection } from '@/types/types';
 
